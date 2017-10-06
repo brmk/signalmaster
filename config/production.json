@@ -4,8 +4,8 @@
     "port": 8888,
     "/* secure */": "/* whether this connects via https */",
     "secure": true,
-    "key": "config/sslcerts/key.pem",
-    "cert": "config/sslcerts/cert.pem",
+    "key": "config/sslcerts/mvp.bringface.com.key",
+    "cert": "config/sslcerts/mvp.bringface.com.crt",
     "password": null
   },
   "rooms": {
@@ -18,10 +18,5 @@
     }
   ],
   "turnservers": [
-    {
-      "urls": ["turn:your.turn.servers.here"],
-      "secret": "turnserversharedsecret",
-      "expiry": 86400
-    }
   ]
 }
