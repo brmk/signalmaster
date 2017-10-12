@@ -3,7 +3,7 @@ var socketIO = require('socket.io'),
     crypto = require('crypto');
 
 module.exports = function (server, config) {
-    var io = socketIO.listen(server);
+    var io = socketIO(server, {'pingInterval': 5000, 'pingTimeout': 10000}).listen(server);
 
     io.sockets.on('connection', function (client) {
         client.resources = {
